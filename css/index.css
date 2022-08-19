@@ -1,0 +1,200 @@
+ 
+.loader{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-color: #16191e;
+    position: absolute;
+}
+.loader>div{
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    border: 10px solid white;
+    border-top-color: red;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border-radius: 50%;
+    animation: spin 1.5s infinite linear;
+}
+@keyframes spin{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+#site-loader{
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    background: #fff url('../src/icons/Ripple-loader.gif') no-repeat center;
+    z-index: 99999;
+}
+
+/* Index Page CSS */
+
+.main-page{
+    background-image: url('../src/images/sd.png');
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+  }
+  .main-page-inner{
+    background: rgba(230, 238, 248, 0.5);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+     
+    margin: 200px 0;
+    border-radius: 15px;
+    padding: 25px;
+    border: 2px dashed #00800026;
+    
+  }
+  /*
+  .main-section{
+    background: rgba(230, 238, 248, 0.5);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    margin: 25px;
+   
+  }
+  */
+  .main-content{
+    margin: 25px;
+    background: rgba(230, 238, 248, 0.5);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 25px;
+    border: 2px dashed #ffa5005c;
+    border-radius: 15px;
+  }
+  .student-card{
+    background-image: url('../src/images/univresity-st.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 350px;
+    border-radius: 15px;
+  }
+  .student-icons{
+    border: 3px solid orange;
+    border-radius: 50%;
+    padding: 10px;
+    animation: student-icons 4s ease 0s 1 normal forwards;
+  }
+  @keyframes student-icons {
+    0% {
+      opacity: 0;
+      transform: rotate(-540deg) scale(0);
+    }
+
+    100% {
+      opacity: 1;
+      transform: rotate(0) scale(1);
+    }
+  }
+
+  .content-section .student-confirm{
+     
+    padding: 10px;
+    margin: 10px;
+    background: green;
+    border-radius: 39.9008px;
+    border: none;
+    font-size: 22px;
+    width: 250px;
+    color: white;
+    font-weight:600;
+    border: 2px solid green;
+  }
+  .content-section .student-confirm:hover{
+     
+     padding: 10px;
+     margin: 10px;
+     background: transparent;
+     border-radius: 39.9008px;
+     border: 2px dashed green;
+     font-size: 22px;
+     width: 250px;
+     color: green;
+     font-weight:600;
+     transition: all 0.5s ease;
+   }
+   .content-section .student-no:hover{
+     
+     padding: 10px;
+     margin: 10px;
+     background: transparent;
+     border-radius: 39.9008px;
+     border: 2px dashed orange;
+     font-size: 22px;
+     width: 250px;
+     color: orange;
+     font-weight:600;
+     transition: all 0.5s ease;
+   }
+  .content-section .student-no{
+    background: orange;
+    padding: 10px;
+    margin: 10px;
+    border: 2px dashed orange;
+    border-radius: 39.9008px;
+    font-size: 22px;
+    width: 250px;
+    color: white;
+    font-weight:600;
+  }
+  button:focus{
+    outline: none;
+  }
+
+  @media screen and (max-width: 768px) {
+    .main-page-inner{
+    background: rgba(230, 238, 248, 0.5);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+     
+    margin:10px 0;
+    border-radius: 15px;
+    padding: 25px;
+    border: 2px dashed #00800026;
+    
+  }
+  }
+  
+
+  /* Student Login  */
+
+  .status_message {
+    font-size: 20px;
+    color: white;
+    background: #00b894;
+    padding: 15px 0;
+    border-radius: 5px;
+    margin: 15px 0;
+}
+.empty_message {
+    font-size: 20px;
+    color: white;
+    background: red;
+    padding: 15px 0;
+    border-radius: 5px;
+    margin: 15px 0;
+}
+button:focus{
+  outline: none;
+}
+.register-form #register-btn:hover {
+background: white;
+border-radius: 23.011px;
+width: 391.19px;
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 44px;
+color: #84C7AE;
+box-shadow: 0px 1px 8px 3px #17a2b814;
+margin: 10px 0;
+}

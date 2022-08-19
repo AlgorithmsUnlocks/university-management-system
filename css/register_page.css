@@ -1,0 +1,85 @@
+/* Registration form CSS */
+
+.registration-form
+{
+    background: #F6FBF9;
+  border-radius: 49.0901px;
+  margin: 5rem auto;
+  padding: 15px 55px;
+}
+.registration-form .form-info h3
+{
+    font-style: normal;
+    font-weight: 700;
+    font-size:40px;
+    line-height:62px;
+}
+.registration-form .form-info p
+{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    padding: 0 25px;
+}
+.registration-form .register-form input,.register-form select
+{
+    background: #FFFFFF;
+    border: 1.53407px solid rgba(0, 0, 0, 0.1);
+    border-radius: 15.3407px;
+    height: 40px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+}
+.register-form #register-btn
+{
+    background: #84C7AE;
+    border-radius: 23.011px;
+    width: 391.19px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 44px;
+    color: white;
+    margin: 10px 0;
+}
+.register-form p
+{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+}
+.register-form p a
+{
+    border-bottom: 1px solid;
+} 
+
+
+@media screen and (max-width: 768px) {
+    .register-form #register-btn
+        {
+            width: 250px;
+        }
+    input.form-controls-file
+        {
+            width: 300px;
+        }
+    .registration-form
+        {
+            padding: 15px 30px;
+        }
+}
+ 
+
+/* Student Registration Page */
+.status_message {
+    font-size: 20px;
+    color: white;
+    background: #00b894;
+    padding: 15px 0;
+    border-radius: 5px;
+    margin: 15px 0;
+}
