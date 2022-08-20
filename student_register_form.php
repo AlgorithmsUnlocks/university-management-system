@@ -97,18 +97,20 @@
                <div class="info text-center">
                   <p>Already Have An Student Account? <a href='student_login.php'>Sign In</a></p>
                </div>
+
+
                
               
           </div>
-          
         </div>
       </div>
         </div>
       </div>
-
-      
-
      </div>
+
+
+
+     
 
      <script>
 

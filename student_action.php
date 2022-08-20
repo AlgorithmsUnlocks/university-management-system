@@ -8,6 +8,61 @@ include ('Database/config.php');
 
 <?php
 
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
+
+function send_mail($student_email,$verification_code){
+
+    
+    require('PHPMailer/PHPMailer.php');
+    require('PHPMailer/SMTP.php');
+    require('PHPMailer/Exception.php');
+
+    $mail = new PHPMailer(true);
+
+    try {
+        //Server settings
+        //$mail->SMTPDebug = SMTP::DEBUG_SERVER;                       
+        $mail->isSMTP();                                             
+        $mail->Host       = 'smtp.gmail.com';                     
+        $mail->SMTPAuth   = true;                                   
+        $mail->Username   = 'cse_1912020146@lus.ac.bd';                     
+        $mail->Password   = 'ruman#lu#146##';                                
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;             
+        $mail->Port       = 465;                                    
+    
+        //Recipients
+        $mail->setFrom('cse_1912020146@gmail.com', 'Email Verifications');
+        $mail->addAddress($student_email);      
+       
+        /*
+        //Attachments
+        $mail->addAttachment('/var/tmp/file.tar.gz');          
+        $mail->addAttachment('/tmp/image.jpg', 'new.jpg');   
+        */ 
+    
+        //Content
+        $mail->isHTML(true);                                   
+        $mail->Subject = 'Email Verification from Leading University Management System';
+        $mail->Body    = "Thanks for registration, click the link below for verify email address
+        <a href='http://localhost/university-management-system/verify_email.php?email=$student_email&verification_code=$verification_code'> Verify Now</a>";
+        
+        $mail->send();
+    
+        return true;
+    
+    } catch (Exception $e) {
+       // echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+       return false;
+    }
+     
+
+}
+
+
+
 if(isset($_POST['register_student'])){
 
     $student_name = $_POST['student_name'];
@@ -32,6 +87,8 @@ if(isset($_POST['register_student'])){
     $duplicate_student_email = mysqli_query($db_conn,"SELECT `email` FROM `student_panel` WHERE `email` = '$student_email'");
     $duplicate_student_phone = mysqli_query($db_conn,"SELECT `phone` FROM `student_panel` WHERE `phone` = '$student_phone'");
 
+
+    $verification_code = bin2hex(random_bytes(16));
 
 
 
@@ -67,14 +124,17 @@ if(isset($_POST['register_student'])){
        }
        else{
 
-            $query = "INSERT INTO `student_panel`(`name`, `email`, `phone`, `st_id`, `department`, `dob`, `password`, `profile`) VALUES ('$student_name','$student_email','$student_phone','$student_id','$student_department','$student_dob','$student_password','$image_des')";
+             
+
+            $query = "INSERT INTO `student_panel`(`name`, `email`, `phone`, `st_id`, `department`, `dob`, `password`, `profile`, `verification_code`, `is_verify`) VALUES ('$student_name','$student_email','$student_phone','$student_id','$student_department','$student_dob','$student_password','$image_des','$verification_code','0')";
 
             $query_run = mysqli_query($db_conn,$query);
         
-            if($query_run){
+            if($query_run && send_mail($_POST['student_email'],$verification_code)){
+
                 move_uploaded_file($imageLocation,$image_des);
 
-                $_SESSION['status'] = "Congratulations, Your registration is completed";
+                $_SESSION['status'] = "Congratulations, Your registration is processing,Please verify your email in in inbox";
                 header('Location: student_login.php');
             }else{
                 echo "<script>alert('Stuent Registtration is failed');</script>";
@@ -107,12 +167,19 @@ if(isset($_POST['login_student'])){
     if(!empty($student_id) && !empty($student_password)){
 
         if(mysqli_num_rows($query) > 0){
-          
-            $_SESSION['st_id'] = $student_id;
-            $_SESSION['password'] = $student_password;
-                      
-            $_SESSION['login_success'] = "Congratulation, You have successfully logged in";
-            header('Location: student/index.php');
+
+            $fetch = mysqli_fetch_assoc($query);
+
+            if($fetch['is_verify']== 1){
+                $_SESSION['st_id'] = $student_id;
+                $_SESSION['password'] = $student_password;
+                          
+                $_SESSION['login_success'] = "Congratulation, You have successfully logged in";
+                header('Location: student/index.php');
+            }else{
+                $_SESSION['login_error'] = "Email is not Verify,Please Verify to login";
+                header('Location: student_login.php');
+            }
 
         }else{
             $_SESSION['login_error'] = "Student id and password is not match our server";
