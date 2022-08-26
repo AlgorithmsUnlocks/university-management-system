@@ -104,6 +104,30 @@
         border-radius: 10px;
         width: 100%;
     }
+    .sidebar .nav-item:hover {
+        position: relative;
+        background: #36b9cc;
+        margin: 3px 0;
+        border-radius: 35px;
+    }
+
+    .sidebar .nav-item {
+        position: relative;
+        background: #2a96a540;
+        margin: 2px 0;
+        border-radius: 35px;
+    }
+    .bg-gradient-primary {
+        background-color: #22a6b3!important;
+        background-size: cover;
+        background: #22a6b3!important;
+    }
+     @media screen and (max-width: 768px) {
+        .sidebar{
+        width: 14px!important;
+        }
+    }
+     
 
 
     </style>

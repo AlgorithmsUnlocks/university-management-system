@@ -25,83 +25,96 @@
     
      <div class="container-fluid">
       <div class="row justify-content-center">
-        <div class="col-md-6 md-auto">
-        <div class="container registration-form">
-        <div class="row">
+        <div class="col-md-12">
+         <div class="container registration-form rounded">
+          <div class="row align-items-start">
 
-            <div class="col-lg-10 m-auto">
-              <div class="form-info text-center">
-              <?php 
-               session_start();
-                if(isset($_SESSION['empty']) && $_SESSION['empty'] !=''){
-                  echo '<h6 class="text-center empty_message">'. $_SESSION['empty'].'</h6>';
-                  unset($_SESSION['empty']);
-                  
-                }
-               ?>
-               
+            <div class="col-md-12 text-center p-3">
                 <h4>Create An Student Account</h4>
                 <p>This is only for <span>Leading University </span> Student</p>
+            </div>
+
+            <div class="col-md-6 align-itme-center p-3">
+               <div class="register-right-content">
+
+                  <img src="src/images/university-student.jpg" alt="" class="img-fluid rounded">
+                  <div class="info p-3"> 
+ 
+                      <p class="text-center">Already Have A Student Account? <a href='student_login.php'>Sign In</a></p>
+                      <?php 
+                       session_start();
+                        if(isset($_SESSION['empty']) && $_SESSION['empty'] !=''){
+                          echo '<h6 class="text-center empty_message">'. $_SESSION['empty'].'</h6>';
+                          unset($_SESSION['empty']);
+                          
+                        }
+                      ?>
+                  </div>
+               </div>  
+            </div>
+
+            <div class="col-lg-6 p-3">
+              <div class="register-left-content">
+                  <div class="form-info text-center">
                   
-              </div>
-                <form action="student_action.php" method="post" enctype="multipart/form-data">
-                  <div class="register-form">
-                      <div class="form-group">
-                        <input type="text" class='form-control' name='student_name' placeholder='Student Name' require>
+
+                  </div>
+                    <form action="student_action.php" method="post" enctype="multipart/form-data">
+                      <div class="register-form">
+                          <div class="form-group">
+                            <input type="text" class='form-control' name='student_name' placeholder='Student Name' require>
+                            
+                          </div>
+                          <div class="form-group">
+
+                          <input type="email" class='form-control' name='student_email' placeholder='Email Address' require>
+                          </div>
+                          <div class="form-group">
                         
-                      </div>
-                      <div class="form-group">
+                            <input type="text" class='form-control' name='student_phone' placeholder='Phone Number' require>
+                          </div>
+                          <div class="form-group">
+                        
+                            <input type="text" class='form-control' name='student_id' placeholder='Stuent Id.' require>
+                          </div>
 
-                      <input type="email" class='form-control' name='student_email' placeholder='Email Address' require>
-                      </div>
-                      <div class="form-group">
-                    
-                        <input type="text" class='form-control' name='student_phone' placeholder='Phone Number' require>
-                      </div>
-                      <div class="form-group">
-                    
-                        <input type="text" class='form-control' name='student_id' placeholder='Stuent Id.' require>
-                      </div>
-
-                      <div class="form-group">
-                      <select name="student_department" class='form-control'>
-                        <option value="">Choose Your Department</option>
-                        <option value="Computer Science and Engineering"> CSE </option>
-                        <option value="EEE">EEE</option>
-                        <option value="Civil">Civil</option>
-                        <option value="BBA">BBA</option>
-                        <option value="Architecture">Architecture</option>
-                        <option value="Islamic Studies">Islamic Studies</option>
-                        <option value="Law">Law</option>
-                        <option value="English">English</option>
-                      </select>
-                      </div>  
-                      <div class="form-group">
-                        <input type="date" class='form-control' name='student_dob'  placeholder='Date of Birth' require>
-                      </div>                               
-                      <div class="form-group">               
-                        <input type="password" class='form-control' name='student_password' placeholder='Password' require>
-                      </div>
-                      <div class="form-group">
-                        <input type="text" class='form-control' name='student_cfpassword'  placeholder='Confirm Password' require>
-                      </div>
-                      <div class="form-group col">
-                          <label for="user_avater">Upload Your Profile Picture</label>
-                          <input type="file" class='form-controls-file' name='student_avater' require> 
-                      </div>    
-                      <div class="submit-regiter text-center">
-                        <button type='submit' name='register_student' id='register-btn'>Create Account</button>
-                      </div> 
-                    </div>
-                </form>
-               <div class="info text-center">
-                  <p>Already Have An Student Account? <a href='student_login.php'>Sign In</a></p>
-               </div>
+                          <div class="form-group">
+                          <select name="student_department" class='form-control'>
+                            <option value="">Choose Your Department</option>
+                            <option value="Computer Science and Engineering"> CSE </option>
+                            <option value="EEE">EEE</option>
+                            <option value="Civil">Civil</option>
+                            <option value="BBA">BBA</option>
+                            <option value="Architecture">Architecture</option>
+                            <option value="Islamic Studies">Islamic Studies</option>
+                            <option value="Law">Law</option>
+                            <option value="English">English</option>
+                          </select>
+                          </div>  
+                          <div class="form-group">
+                            <input type="date" class='form-control' name='student_dob'  placeholder='Date of Birth' require>
+                          </div>                               
+                          <div class="form-group">               
+                            <input type="password" class='form-control' name='student_password' placeholder='Password' require>
+                          </div>
+                          <div class="form-group">
+                            <input type="password" class='form-control' name='student_cfpassword'  placeholder='Confirm Password' require>
+                          </div>
+                          <div class="form-group">
+                              <input type="file" class='form-control' name='student_avater' id="formFile" require> 
+                              <small>Upload your profile photo!</small>
+                          </div>    
+                          <div class="submit-regiter text-center">
+                            <button type='submit' name='register_student' id='register-btn'>Create Account</button>
+                          </div> 
+                        </div>
+                    </form>
+                </div>
+            </div>
+   
 
 
-               
-              
-          </div>
+
         </div>
       </div>
         </div>

@@ -2,7 +2,7 @@
 
 .registration-form
 {
-    background: #F6FBF9;
+    background: #f6fbf9c2;
   border-radius: 49.0901px;
   margin: 5rem auto;
   padding: 15px 55px;
@@ -25,8 +25,8 @@
 .registration-form .register-form input,.register-form select
 {
     background: #FFFFFF;
-    border: 1.53407px solid rgba(0, 0, 0, 0.1);
-    border-radius: 15.3407px;
+    border: 1.53407px solid #28a74524;
+    border-radius: 5px;
     height: 40px;
     font-style: normal;
     font-weight: 400;

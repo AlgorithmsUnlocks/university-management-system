@@ -9,9 +9,9 @@ include ('includes/navbar.php');
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
-                    <!-- Page Heading -->
+                    <!-- Page Heading    <img src="upload/label.png" alt="" srcset="">-->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <img src="upload/label.png" alt="" srcset="">
+                       
                         <h2 class="h3 mb-0 text-gray-800">Faculty Member of CSE</h2>
                           <!-- Page Heading  
                         <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i

@@ -27,27 +27,35 @@
     
      <div class="container-fluid">
       <div class="row justify-content-center">
-        <div class="col-md-6 md-auto">
-        <div class="container registration-form">
-        <div class="row">
-
-            <div class="col-lg-10 m-auto">
-              <div class="form-info text-center">
-              <?php 
-               session_start();
-                if(isset($_SESSION['status']) && $_SESSION['status'] !=''){
-                  echo '<h6 class="text-center status_message">'. $_SESSION['status'].'</h6>';
-                  unset($_SESSION['status']);
-                  
-                }else if(isset($_SESSION['login_error']) && $_SESSION['login_error'] !=''){
-                  echo '<h6 class="text-center empty_message">'. $_SESSION['login_error'].'</h6>';
-                  unset($_SESSION['login_error']);
-                  
-                }
-               ?>
+        <div class="col-md-12">
+         <div class="container registration-form rounded">
+           <div class="row align-items-center">
+            
+           <div class="col-md-12 text-center p-3">
                 <h4>Login with Student Account</h4>
                 <p>This is only for <span>Leading University </span> Student</p>
+           </div>
+
+           <div class="col-md-6 p-3">
+
+              <img src="src/images/student-login.jpg" alt="Leading University Student" class="img-fluid">
                 
+           </div>
+
+            <div class="col-lg-6 p-3">
+              <div class="form-info text-center">
+              <?php 
+                  session_start();
+                    if(isset($_SESSION['status']) && $_SESSION['status'] !=''){
+                      echo '<h6 class="text-center status_message">'. $_SESSION['status'].'</h6>';
+                      unset($_SESSION['status']);
+                      
+                    }else if(isset($_SESSION['login_error']) && $_SESSION['login_error'] !=''){
+                      echo '<h6 class="text-center empty_message">'. $_SESSION['login_error'].'</h6>';
+                      unset($_SESSION['login_error']);
+                      
+                    }
+                  ?>
               </div>
                 <form action="student_action.php" method="post" enctype="multipart/form-data">
                   <div class="register-form">
@@ -71,12 +79,11 @@
 
                     </div>
 
-              </form>
-
-              <div class="info text-center">
-                  <p>Already Have An Student Account? <a href='student_register_form.php'>Sign Up</a></p>
-               </div>
+              </form>  
               
+               <div class="info text-center">
+                  <p>Don't Have A Student Account? <a href='student_register_form.php'>Sign Up</a></p>
+               </div>
           </div>
           
         </div>
