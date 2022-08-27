@@ -18,14 +18,14 @@ try {
     $mail->isSMTP();                                             
     $mail->Host       = 'smtp.gmail.com';                     
     $mail->SMTPAuth   = true;                                   
-    $mail->Username   = 'cse_1912020146@lus.ac.bd';                     
-    $mail->Password   = 'ruman#lu#146##';                                
+    $mail->Username   = 'youremail@gmail.com';                     
+    $mail->Password   = 'password';                                
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;             
     $mail->Port       = 465;                                    
 
     //Recipients
-    $mail->setFrom('cse_1912020146@gmail.com', 'PHP Mailer Test');
-    $mail->addAddress('cse_1912020146@gmail.com');      
+    $mail->setFrom('youremail@gmail.com', 'PHP Mailer Test');
+    $mail->addAddress('youremail@gmail.com');      
    
     /*
     //Attachments
