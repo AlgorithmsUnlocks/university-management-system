@@ -46,7 +46,6 @@
                         if(isset($_SESSION['empty']) && $_SESSION['empty'] !=''){
                           echo '<h6 class="text-center empty_message">'. $_SESSION['empty'].'</h6>';
                           unset($_SESSION['empty']);
-                          
                         }
                       ?>
                   </div>
