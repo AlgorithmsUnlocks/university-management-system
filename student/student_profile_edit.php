@@ -30,7 +30,7 @@ $query = mysqli_query($db_conn,"SELECT * FROM `student_panel` WHERE `st_id` = '$
                     
                         <input type="text" class='form-control' name='student_id' value="<?php echo $fetch['st_id'] ?>" require>
                       </div>
-
+                      
                       <div class="form-group">
                       <select name="student_department" class='form-control' value="<?php echo $fetch['department'] ?>">
                         <option value="">Choose Your Department</option>
@@ -43,12 +43,13 @@ $query = mysqli_query($db_conn,"SELECT * FROM `student_panel` WHERE `st_id` = '$
                         <option value="Law">Law</option>
                         <option value="English">English</option>
                       </select>
-                      </div>  
+                      </div> 
+                     
                       <div class="form-group">
                         <input type="date" class='form-control' name='student_dob' value="<?php echo $fetch['dob'] ?>" require>
                       </div>                               
                       <div class="form-group">               
-                        <input type="text" class='form-control' name='student_password' value="<?php echo $fetch['password'] ?>" require>
+                        <input type="password" class='form-control' name='student_password' value="<?php echo $fetch['password'] ?>" require>
                       </div>
                       
                       <div class="form-group col">

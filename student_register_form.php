@@ -34,10 +34,10 @@
                 <p>This is only for <span>Leading University </span> Student</p>
             </div>
 
-            <div class="col-md-6 align-itme-center p-3">
+            <div class="col-md-6 align-itmes-center p-3">
                <div class="register-right-content">
 
-                  <img src="src/images/university-student.jpg" alt="" class="img-fluid rounded">
+                  <img src="src/images/sign-up-screen.jpg" alt="" class="img-fluid rounded">
                   <div class="info p-3"> 
  
                       <p class="text-center">Already Have A Student Account? <a href='student_login.php'>Sign In</a></p>

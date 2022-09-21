@@ -65,7 +65,7 @@ function send_mail($student_email,$verification_code){
 
 if(isset($_POST['register_student'])){
 
-    $student_name = $_POST['student_name'];
+    $student_name =  $_POST['student_name'];
     $student_email = $_POST['student_email'];
     $student_phone = $_POST['student_phone'];
     $student_id = $_POST['student_id'];
@@ -134,7 +134,7 @@ if(isset($_POST['register_student'])){
 
                 move_uploaded_file($imageLocation,$image_des);
 
-                $_SESSION['status'] = "Congratulations, Your registration is processing,Please verify your email in in inbox";
+                $_SESSION['status'] = "Congratulations, Your registration is processing,Please verify your email in inbox";
                 header('Location: student_login.php');
             }else{
                 echo "<script>alert('Stuent Registtration is failed');</script>";

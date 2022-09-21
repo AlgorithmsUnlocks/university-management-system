@@ -66,8 +66,7 @@ $query = mysqli_query($db_conn,"SELECT * FROM `student_panel` WHERE `st_id` = '$
                                     <hr class="left-hr">
                                     <h5>Date of Birth </h5>
                                     <hr class="left-hr">
-                                    <h5>Password  </h5>
-                                    <hr class="left-hr">
+                                    
                                     <h5>Account Creation Date  </h5>
                                     <hr class="left-hr">
                                    
@@ -84,8 +83,7 @@ $query = mysqli_query($db_conn,"SELECT * FROM `student_panel` WHERE `st_id` = '$
                                     <hr class="left-hr">
                                     <h5><?php echo ": ".$fetch['dob']; ?></h5>
                                     <hr class="left-hr">
-                                    <h5><?php echo ": ".$fetch['password']; ?></h5>
-                                    <hr class="left-hr">
+                                     
                                     <h5><?php echo ": ".$fetch['create_date']; ?></h5>
                                     <hr class="left-hr">
                                     

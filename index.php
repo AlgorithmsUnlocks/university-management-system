@@ -10,11 +10,14 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <title> Leading University Management System </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+      
+
+    <title> LUMS | Developer ER </title>
 
     <link rel="stylesheet" href="./css/index.css">
-
-
+ 
  
   </head>
   <body onload="myFunction()">
@@ -22,22 +25,15 @@
   <div id="site-loader">
      
   </div>
-  
-    
 
-    <style>
 
-       
 
-    </style>
-
-    <div class="container-fluid main-page">
+  <div class="container-fluid main-page">
       <div class="container">
         <div class="row">
           <div class="col-md-10 m-auto">
             <div class="main-page-inner">
-              <div class="main-section">
-                <div class="main-content">
+              <div class="main-section">                
                   <div class="row">
                     <div class="col-md-6">
                         <div class="student-card">
@@ -63,8 +59,7 @@
             
                           </div>
                       </div>
-                    </div>
-                  </div>
+                    </div>                 
                 </div>
               </div>
             </div>
@@ -80,41 +75,33 @@
 
 
 
+
+
+
+
+
+
+
+   
  
-
-<!-- 
-
-    <div class="contents">
-      <h3 class="text-center p-5"><a href="student_register_form.php">Student Register</a></h3>
-    </div>
-
-    <div style="background: red">
-    <img src="src/images/lumsp.png" alt="" srcset="">
-    </div>
--->
-
     <script>
 
       var preloader = document.getElementById("site-loader");
       function myFunction(){
         preloader.style.display = "none";
       }
-
       function student_register(){
-          location.href="student_register_form.php";
+        location.href="student_register_form.php";
       }
       function student_no(){
-        location.href="leading_university.php";
+      location.href="leading_university.php";
       }
-       
-       
+
     </script>
 
 
 
-
- 
- 
+    <script src="./js/script.js"></script>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

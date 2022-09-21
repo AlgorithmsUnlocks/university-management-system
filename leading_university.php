@@ -13,42 +13,164 @@
     <title> Leading University Management System</title>
 
     <link rel="stylesheet" href="./css/index.css">
-    
-    <style>
-      body{
-        background: orange;
+  
+   <style>
+    .none-t{
+     padding: 200px 0;
+    }
+    .wrapper{
+    background-color: rgba(255, 255, 255, 0.315);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: hsla(183, 56%, 42%, 1);
+    background: linear-gradient(270deg, hsla(183, 56%, 42%, 1) 22%, hsla(224, 55%, 62%, 1) 100%);
+    }
+    .box div{
+      height: 65px;
+      width: 65px;
+      position: absolute;
+      background-color: transparent;
+      border: 4px solid white;
+      animation: animate 5s infinite;
+      border-radius: 50px;
+    }
+    .box div:nth-child(1){
+      height: 65px;
+      width: 65px;
+      position: absolute;
+      top: 90%;
+      left: 65%;
+      background-color: transparent;
+      border: 3px solid white;
+      animation: animate 7s infinite;
+    }
+    .box div:nth-child(2){
+      height: 65px;
+      width: 65px;
+      position: absolute;
+      top: 50%;
+      left: 65%;
+      background-color: transparent;
+      border: 3px solid white;
+      animation: animate 8s infinite;
+    }
+    .box div:nth-child(3){
+      height: 65px;
+      width: 65px;
+      position: absolute;
+      top: 50%;
+      left: 25%;
+      background-color: transparent;
+      border: 3px solid white;
+      animation: animate 11s infinite;
+    }
+    .box div:nth-child(4){
+      height: 65px;
+      width: 65px;
+      position: absolute;
+      top: 10%;
+      left: 80%;
+      background-color: transparent;
+      border: 3px dashed white;
+      animation: animate 12s infinite;
+    }
+    .box div:nth-child(5){
+      height: 100px;
+      width: 100px;
+      position: absolute;
+      top: 20%;
+      left: 30%;
+      background-color: transparent;
+      border: 3px dotted white;
+      animation: animate 15s infinite;
+    }
+    .box div:nth-child(6){
+      height: 65px;
+      width: 65px;
+      position: absolute;
+      top: 90%;
+      left: 10%;
+      background-color: transparent;
+      border: 3px dotted white;
+      animation: animate 5s infinite;
+    }
+    .box div:nth-child(7){
+      height: 65px;
+      width: 65px;
+      position: absolute;
+      top: 65%;
+      left: 5%;
+      background-color: transparent;
+      border: 3px dashed white;
+      animation: animate 5s infinite;
+    }
+    .box div:nth-child(8){
+      height: 65px;
+      width: 65px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      background-color: transparent;
+      border: 3px dashed white;
+      animation: animate 5s infinite;
+    }
+    .box div:nth-child(9){
+      height: 65px;
+      width: 65px;
+      position: absolute;
+      top: 80%;
+      left: 85%;
+      background-color: transparent;
+      border: 3px solid white;
+      animation: animate 5s infinite;
+    }
+    @keyframes animate{
+      0%{
+        transform: scale(0.5);
+
       }
-    </style>
+      100%{
+        transform: scale(1);
+       
+        opacity: 0;
+      }
+    }
+
+   </style>
+
 
   </head>
   <body onload="myFunction()">
 
-    <!--
-<div class="loader">
-     <div></div>
-  </div>
 
-    -->
-    <div id="site-loader">
+    <div class="wrapper">
+     <div class="none-t text-center">
+        <h3 class="text-white p-3">No Data Found </h3>       
+        <a href="index.php">
+          <button class="btn btn-warning w-50 m-auto text-white">Go Back</button>
+        </a>
+     </div>
+      <div class="box">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div id="site-loader">
+
+      </div>
 
     </div>
-  
      
-
-
-
-      <h3 class="text-center">
-        Non Student View
-      </h3>
-
-     <a href="index.php">Back</a>
-
-
-
-
-
-
-
+      
 
     <script>
 

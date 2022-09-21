@@ -10,9 +10,9 @@ include 'includes/navbar.php';
                 <!-- Begin Page Content  <img src="upload/label.png" alt="" srcset=""> -->
                 <div class="container-fluid">
           
-                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                    <div class="d-sm-flex align-items-center justify-content-end mb-4">
                          
-                        <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+                        <h1 class="h4 mb-0 text-success">Dashboard</h1>
                           <!-- Page Heading  
                         <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                                 class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
@@ -25,8 +25,7 @@ include 'includes/navbar.php';
                     <div class="row">
 
                          
-                      
-                        <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="col-xl-3 col-md-6 mb-4">
                             <div class="card border-left-primary shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
@@ -42,17 +41,16 @@ include 'includes/navbar.php';
                                                $row = mysqli_num_rows($query_run); 
                                                                                           
                                             ?>
-                                                <h4><?php echo '<h3> Faculty &#123; '.$row.' &#125;	</h3>';  ?></h4>
+                                                <h4><?php echo '<h4> Faculty ( '.$row.' )</h4>';  ?></h4>
                                             </div>
                                         </div>
                                         <div class="col-auto">
-                                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                                        <i class="fa-solid fa-building fa-2x text-gray-300"></i>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
                         
                         <div class="col-xl-3 col-md-6 mb-4">
                             <div class="card border-left-success shadow h-100 py-2">
@@ -69,11 +67,11 @@ include 'includes/navbar.php';
                                                     $row = mysqli_num_rows($query_run); 
                                                                                             
                                                 ?>
-                                                 <h4><?php echo '<h3> Teacher &#123; '.$row.' &#125;</h3>';  ?></h4>
+                                                 <h6><?php echo '<h4>CSE Teacher ( '.$row.' )</h4>';  ?></h6>
                                             </div>
                                         </div>
                                         <div class="col-auto">
-                                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                                        <i class="fa-solid fa-chalkboard-user fa-2x text-gray-300"></i>
                                         </div>
                                     </div>
                                 </div>

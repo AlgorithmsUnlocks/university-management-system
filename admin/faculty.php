@@ -10,9 +10,9 @@ include ('includes/navbar.php');
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <img src="upload/label.png" alt="" srcset="">
-                        <h1 class="h3 mb-0 text-gray-800">Faculty of Leading University</h1>
+                    <div class="d-sm-flex align-items-center justify-content-end mb-4">
+                         
+                        <h1 class="h4 mb-0 text-success">Faculty of Leading University</h1>
                           <!-- Page Heading  
                         <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                                 class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
@@ -24,9 +24,11 @@ include ('includes/navbar.php');
 
     <div class="container">
          <!-- Button trigger modal -->
-        <h2 class='text-center title'>
-        <button type="button" class="btn btn-primary " data-toggle="modal" data-target="#exampleModalLong">
-        Click to Add Faculty 
+        <h2 class='text-center title p-3'>
+        <button type="button" class="btn btn-success " data-toggle="modal" data-target="#exampleModalLong">
+        <i class="fa-solid fa-users-viewfinder"></i> <span>
+          Click to Add Faculty 
+        </span>  
         </button>
         </h2>  
 
@@ -86,18 +88,11 @@ include ('includes/navbar.php');
         <!-- Begin Page Content -->
     <div class="container-fluid">
 
-    <!-- Page Heading -->
-    <h1 class="h3 mb-2 text-gray-800 text-center">FACULTY ARE</h1>
-     
-
-
-
-
-
+    
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">All Faculty</h6>
+        <h6 class="m-0 font-weight-bold text-success text-center">All Faculty of Leading University </h6>
         
     </div>
     <div class="card-body">
@@ -181,12 +176,16 @@ include ('includes/navbar.php');
 
                             <form action="faculty_edit.php" method="post">
                                 <input type="hidden" name="edit_id" value="<?php echo $row['id']; ?>">
-                                 <button type="submit" class='btn btn-success' name='edit_btn'>Edit</button> 
+                                 <button type="submit" class='btn btn-warning' name='edit_btn'>
+                                   <i class="fa-solid fa-pen-to-square"></i>
+                                </button> 
                              </form>
                              <br>
                              <form action="add_faculty.php" method="post">
                                 <input type="hidden" name="delete_id" value="<?php echo $row['id']; ?>">
-                                <button type="submit" class='btn btn-danger' name='delete_btn'>Delete</button>
+                                <button type="submit" class='btn btn-danger' name='delete_btn'>
+                                   <i class="fa-sharp fa-solid fa-delete-left"></i>
+                                </button>
                             </form>
                             
 

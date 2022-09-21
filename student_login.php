@@ -16,9 +16,6 @@
     <link rel="stylesheet" href="css/register_page.css">
     <link rel="stylesheet" href="./css/index.css">
 
-    <style>
-       
-    </style>
   </head>
   <body onload="myFunction()">
   <div id="site-loader">
@@ -38,7 +35,7 @@
 
            <div class="col-md-6 p-3">
 
-              <img src="src/images/student-login.jpg" alt="Leading University Student" class="img-fluid">
+              <img src="src/images/singin-screen.jpg" alt="Leading University Student" class="img-fluid">
                 
            </div>
 

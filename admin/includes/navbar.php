@@ -5,10 +5,10 @@
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
-                <div class="sidebar-brand-icon rotate-n-15">
-                    <img src="img/logo-white.png" alt="" width='50'>
+                <div class="sidebar-brand-icon  ">
+                <img src="../src/images/wlums.png" alt="" width="120px">
                 </div>
-                <div class="sidebar-brand-text mx-3">Leading <sup>University</sup></div>
+                 
             </a>
 
             <!-- Divider -->
@@ -17,28 +17,32 @@
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
                 <a class="nav-link" href="index.php">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span><?php  echo "Welcome ".$_SESSION['admin_email'];  ?></span></a>
+                    <i class="fa-solid fa-user"></i>
+                    <span><?php  echo "Hi ".$_SESSION['admin_email'];  ?></span></a>
             </li>
 
             <!-- Divider -->
             <hr class="sidebar-divider">
 
             <!-- Heading -->
-            <div class="sidebar-heading">
+            <div class="sidebar-heading text-warning">
                 Leading University
             </div>
-
+            <li class="nav-item">
+                <a class="nav-link" href="./faculty.php">
+                <i class="fa-solid fa-school text-white fs-17"></i>
+                    <span>Faculty of LU</span></a>
+            </li>
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-cog"></i>
-                    <span>Depeartments</span>
+                    <i class="fa-solid fa-building text-white fs-17"></i>
+                    <span>Departments</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">All Depeartment:</h6>
+                        <h6 class="collapse-header">All Department:</h6>
                         <a class="collapse-item" href="#">CSE</a>
                         <a class="collapse-item" href="#">EEE</a>
                         <a class="collapse-item" href="#">BBA</a>
@@ -53,27 +57,15 @@
             </li>
 
           
-
-            <li class="nav-item">
-                <a class="nav-link" href="./register.php">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Admin Panel</span></a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" href="./faculty.php">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Faculty of LU</span></a>
-            </li>
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree"
                     aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-cog"></i>
+                    <i class="fa-solid fa-users-between-lines fs-17 text-white"></i>
                     <span>Faculty Member of LU</span>
                 </a>
                 <div id="collapseThree" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">All Depeartment:</h6>
+                        <h6 class="collapse-header">All Department:</h6>
                         <a class="collapse-item" href="cse_teacher.php">CSE</a>
                         <a class="collapse-item" href="#">EEE</a>
                         <a class="collapse-item" href="#">BBA</a>
@@ -89,7 +81,7 @@
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFour"
                     aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-cog"></i>
+                    <i class="fa-solid fa-circle-info fs-17 text-white"></i>
                     <span>Admission</span>
                 </a>
                 <div id="collapseFour" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
@@ -109,16 +101,10 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Project / Thesis Proposal</span></a>
-            </li>
-
-            <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFive"
                     aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-cog"></i>
-                    <span>Class Routine</span>
+                    <i class="fa-solid fa-magnifying-glass-plus fs-17 text-white"></i>
+                    <span>Class Routine</span>  
                 </a>
                 <div id="collapseFive" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
@@ -135,71 +121,56 @@
                     </div>
                 </div>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                <i class="fa-solid fa-diagram-project fs-17 text-white"></i>
+                    <span>Project / Thesis Proposal</span></a>
+            </li>
   
             <li class="nav-item">
                 <a class="nav-link" href="#">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>About Us</span></a>
+                <i class="fa-solid fa-bus fs-17 text-white"></i>
+                    <span>Bus Management</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                <i class="fa-solid fa-book fs-17 text-white"></i>
+                    <span>Library Management </span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                <i class="fa-brands fa-rocketchat fs-17 text-white"></i>
+                    <span>Student live Chat </span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                <i class="fa-brands fa-rocketchat fs-17 text-white"></i>
+                    <span>Teacher live Chat </span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                <i class="fa-solid fa-calendar-days fs-17 text-white"></i>
+                    <span>Events Management
+                      </span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                <i class="fa-brands fa-hire-a-helper fs-17 text-white"></i>
+                    <span>Blood Helper
+                      </span></a>
             </li>
 
             <!-- Divider -->
             <hr class="sidebar-divider">
 
-            <!-- Heading -->
-            <div class="sidebar-heading">
-                Addons
-            </div>
-
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
-                    aria-expanded="true" aria-controls="collapsePages">
-                    <i class="fas fa-fw fa-folder"></i>
-                    <span>Pages</span>
-                </a>
-                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Login Screens:</h6>
-                        <a class="collapse-item" href="login.php">Login</a>
-                        <a class="collapse-item" href="register.html">Register</a>
-                        <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
-                        <div class="collapse-divider"></div>
-                        <h6 class="collapse-header">Other Pages:</h6>
-                        <a class="collapse-item" href="404.html">404 Page</a>
-                        <a class="collapse-item" href="blank.html">Blank Page</a>
-                    </div>
-                </div>
-            </li>
-
-            <!-- Nav Item - Charts -->
-            <li class="nav-item">
-                <a class="nav-link" href="charts.php">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Charts</span></a>
-            </li>
-
-            <!-- Nav Item - Tables -->
-            <li class="nav-item">
-                <a class="nav-link" href="tables.php">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Tables</span></a>
-            </li>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider d-none d-md-block">
+ 
 
             <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
             </div>
 
-            <!-- Sidebar Message -->
-            <div class="sidebar-card d-none d-lg-flex">
-                <img class="sidebar-card-illustration mb-2" src="img/undraw_rocket.svg" alt="...">
-                <p class="text-center mb-2"><strong>Algo-Unlocks</strong> Developer</p>
-                <a class="btn btn-success btn-sm" href="#">Contact</a>
-            </div>
-
+           
         </ul>
         <!-- End of Sidebar -->
 
