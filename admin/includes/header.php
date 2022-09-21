@@ -38,6 +38,7 @@
         background: rgb(34,193,195);
 background: linear-gradient(83deg, rgba(34,193,195,1) 0%, rgba(28,200,138,0.5550595238095238) 100%);
     }
+    
      
     </style>
     
