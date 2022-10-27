@@ -68,13 +68,13 @@
                         <h6 class="collapse-header">All Department:</h6>
                         <a class="collapse-item" href="cse_teacher.php">CSE</a>
                         <a class="collapse-item" href="eee_teacher.php">EEE</a>
-                        <a class="collapse-item" href="#">BBA</a>
-                        <a class="collapse-item" href="#">ENGLISH</a>
-                        <a class="collapse-item" href="#">ARCHITECTURE</a>
-                        <a class="collapse-item" href="#">CIVIL ENGINEERING</a>
-                        <a class="collapse-item" href="#">ISLAMICS STUDIES</a>
-                        <a class="collapse-item" href="#">PUBLIC HEALTH</a>
-                        <a class="collapse-item" href="#">TOURISM & HOST.MANAGEMNET</a>
+                        <a class="collapse-item" href="bba_teacher.php">BBA</a>
+                        <a class="collapse-item" href="eng_teacher.php">ENGLISH</a>
+                        <a class="collapse-item" href="arch_teacher.php">ARCHITECTURE</a>
+                        <a class="collapse-item" href="civil_teacher.php">CIVIL ENGINEERING</a>
+                        <a class="collapse-item" href="islamic_teacher.php">ISLAMICS STUDIES</a>
+                        <a class="collapse-item" href="public_teacher.php">PUBLIC HEALTH</a>
+                        <a class="collapse-item" href="tourism_teacher.php">TOURISM & HOST.MANAGEMNET</a>
                     </div>
                 </div>
             </li>

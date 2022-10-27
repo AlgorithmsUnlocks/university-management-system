@@ -166,7 +166,7 @@ include ('includes/navbar.php');
                         <td>       
                             <?php
                             if($row['teacher_photo'] != null ){
-                                 echo '<img src='.$row['teacher_photo'].' alt="Dean Image" width="100px" style="border-radius: 100%; border: 3px dashed green; padding: 5px ">';?>
+                                echo '<img src='.$row['teacher_photo'].' alt="Dean Image" width="110px" height="110px" style="border-radius: 100%; border: 3px solid rgba(34,193,195,1); padding: 5px">';?>
                                  <?php
                             }else{
                                 echo '<img src="upload/profile.png" alt="Dean Image" width="100px" style="border-radius: 100%; border: 3px dashed green; padding: 5px ">';     

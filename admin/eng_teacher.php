@@ -12,7 +12,7 @@ include ('includes/navbar.php');
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-end mb-4">
                         
-                        <h1 class="h4 mb-0 text-success">Faculty Member of CSE</h1>
+                        <h1 class="h4 mb-0 text-success">Faculty Member of English</h1>
                           <!-- Page Heading  
                         <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                                 class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
@@ -45,7 +45,7 @@ include ('includes/navbar.php');
                 <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form action="action.php" method="POST" enctype="multipart/form-data">
+            <form action="eng_action.php" method="POST" enctype="multipart/form-data">
                 <div class="modal-body">
                             <div class="form-group">
                                 <input type="text" class='form-control'name='teacher_name' placeholder='Teacher Name'>
@@ -92,7 +92,7 @@ include ('includes/navbar.php');
     <!-- DataTales Example -->
     <div class="card shadow mb-4 ">
         <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-success text-center">All Teacher of CSE Department</h6>
+        <h6 class="m-0 font-weight-bold text-success text-center">All Teacher of English Department</h6>
         
     </div>
     <div class="card-body">
@@ -118,7 +118,7 @@ include ('includes/navbar.php');
         <div class="table-responsive">    
 
     <?php 
-        $query = "SELECT * FROM `cse_teacher`";
+        $query = "SELECT * FROM `eng_teacher`";
         $query_run = mysqli_query($db_conn,$query);
     ?>
             <table class="table table-bordered" id="datatablesapi" width="100%" cellspacing="0">
@@ -177,16 +177,17 @@ include ('includes/navbar.php');
                         
                         <td>
 
-                            <form action="cse_teacher_view.php" method="post">
+                           
+                             <form action="eng_teacher_view.php" method="post">
                                 <input type="hidden" name="view_id" value="<?php echo $row['id']; ?>">
                                  <button type="submit" class='btn btn-success' name='view_btn'>
                                  <i class="fa-solid fa-eye"> View </i></button> 
                              </form>
                              <hr>
-                             <form action="action.php" method="post">
+                             <form action="eng_action.php" method="post">
                                 <input type="hidden" name="delete_id" value="<?php echo $row['id']; ?>">
                                 <button type="submit" class='btn btn-danger' name='delete_btn'> 
-                                <i class="fa-sharp fa-solid fa-delete-left"> Delete </i>
+                                <i class="fa-sharp fa-solid fa-delete-left"> Delete</i>
                                 </button>
                             </form>
                             
@@ -201,7 +202,7 @@ include ('includes/navbar.php');
                         }
 
                      }else{
-                        echo "<h2 class='bg-warning text-center text-white'>No Teacher Found in CSE</h2>";
+                        echo "<h2 class='bg-warning text-center text-white'>No Teacher Found in English</h2>";
                      }
                      ?>
                     
