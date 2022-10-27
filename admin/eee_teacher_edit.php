@@ -31,14 +31,14 @@ include ('includes/navbar.php');
                 // Edit Button Actions 
                 if(isset($_POST['edit_btn'])){
                     $id = $_POST['edit_id'];
-                    $query = "SELECT * FROM `cse_teacher` WHERE id = '$id'";
+                    $query = "SELECT * FROM `eee_teacher` WHERE id = '$id'";
                     $query_run = mysqli_query($db_conn,$query);
                 
 
                     foreach($query_run as $row)
                     {
                         ?>
-                         <form action="action.php" method="POST" enctype="multipart/form-data">
+                         <form action="e_action.php" method="POST" enctype="multipart/form-data">
 
                             <div class="form-group">
                                 <input type="text" class='form-control'name='teacher_name' placeholder='Teacher Name' value="<?php echo $row['teacher_name']; ?>">
@@ -53,7 +53,7 @@ include ('includes/navbar.php');
                                 <input type="tel" class='form-control'name='teacher_cell' placeholder='Cell Phone' value="<?php echo $row['teacher_cell']; ?>">
                             </div>
                             <div class="form-group">
-                               <input type="textarea" class='form-control' name='education_bg' placeholder='Education Background' value="<?php echo $row['education_bg']; ?>">
+                                <input type="textarea" class='form-control' name='education_bg' placeholder='Education Background' value="<?php echo $row['education_bg']; ?>">
                                 <?php /*
                                 <textarea name="education_bg" cols="30" rows="3" class='form-control' placeholder='Education Background' value="<?php echo $row['education_bg']; ?>"></textarea>
                                   */ ?>
@@ -74,7 +74,7 @@ include ('includes/navbar.php');
                         </form>
                          <br>
                          <div class="d-flex justify-content-start">
-                         <a href='cse_teacher.php'><button type='submit' class='btn btn-primary '> CANCEL </button></a>
+                         <a href='eee_teacher.php'><button type='submit' class='btn btn-primary '> CANCEL </button></a>
                          </div>
                          
                         <?php

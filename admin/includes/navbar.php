@@ -67,7 +67,7 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">All Department:</h6>
                         <a class="collapse-item" href="cse_teacher.php">CSE</a>
-                        <a class="collapse-item" href="#">EEE</a>
+                        <a class="collapse-item" href="eee_teacher.php">EEE</a>
                         <a class="collapse-item" href="#">BBA</a>
                         <a class="collapse-item" href="#">ENGLISH</a>
                         <a class="collapse-item" href="#">ARCHITECTURE</a>
@@ -133,7 +133,7 @@
                     <span>Bus Management</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="library.php">
                 <i class="fa-solid fa-book fs-17 text-white"></i>
                     <span>Library Management </span></a>
             </li>
