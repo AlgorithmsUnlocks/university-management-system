@@ -1,5 +1,5 @@
 <?php
-    $admin_email = "luadmin@gmail.com";
+    $admin_email = "luadmin@lus.ac.bd";
     $admin_password  = "luadmin";
 
     session_start();
