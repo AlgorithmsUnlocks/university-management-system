@@ -20,35 +20,35 @@ include ('includes/navbar.php');
 
                     <!-- Content Row -->
 
-    <div class="container addBox">
-        <div class="row">
-            <div class="col-md-8 m-auto">
-                
-                <form action="category_action.php" method="POST" enctype="multipart/form-data">
-                    <div class="add_category_group">
-                        <div class="form-group">
-                            <input type="text" class='form-control'name='category_name' placeholder='Enter Category Name'>
-                        </div>
-                        <div class="form-group">
-                            <select name="category_status" class="form-control">
-                                <option value="active"> Select category Status </option>
-                                <option value="active"> Active </option>
-                                <option value="deactive"> Deactive </option>
-                            </select>
-                        </div>
+                <div class="container addBox">
+                    <div class="row">
+                        <div class="col-md-8 m-auto">
                             
-                                
+                            <form action="category_action.php" method="POST" enctype="multipart/form-data">
+                                <div class="add_category_group">
+                                    <div class="form-group">
+                                        <input type="text" class='form-control'name='category_name' placeholder='Enter Category Name'>
+                                    </div>
+                                    <div class="form-group">
+                                        <select name="category_status" class="form-control">
+                                            <option value="active"> Select category Status </option>
+                                            <option value="active"> Active </option>
+                                            <option value="deactive"> Deactive </option>
+                                        </select>
+                                    </div>
+                                        
+                                            
+                                </div>
+                                <div class="save_feild text-center">
+                                    <button type="submit" class="btn btn-primary " name='add_category'>
+                                        <span> <i class="fa-solid fa-bookmark"> Add Category </i></span>
+                                    </button>
+                                </div>
+                            </form>
+                        
+                        </div>
                     </div>
-                    <div class="save_feild text-center">
-                        <button type="submit" class="btn btn-primary " name='add_category'>
-                            <span> <i class="fa-solid fa-bookmark"> Add Category </i></span>
-                        </button>
-                    </div>
-                </form>
-            
-            </div>
-        </div>
-       </div>
+                </div>
 
 
 
