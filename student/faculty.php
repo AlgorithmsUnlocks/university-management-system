@@ -10,7 +10,7 @@ include ('includes/navbar.php');
                 <div class="container-fluid">
 
                     <!-- Page Heading   <img src="upload/label.png" alt="" srcset=""> -->
-                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                    <div class="d-sm-flex align-items-center justify-content-center mb-4">
                         
                         <h1 class="h3 mb-0 text-gray-800">Faculty of Leading University</h1>
                           <!-- Page Heading  
@@ -19,116 +19,14 @@ include ('includes/navbar.php');
                                 -->
                     </div>
 
-                    <!-- Content Row -->
-                    <div class="row">
-
-                        
-
-                        <!--   -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-success shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                            Faculty</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">
-                                               <a href='modern_science.php'>
-                                                <button class='btn btn-success'>
-                                                    Faculty of Modern Science
-                                                    </button>
-                                               </a>
-                                            </div>
-                                        </div>
-                                         
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!--   -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-info shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
-                                                Faculty
-                                            </div>
-                                            <div class="row no-gutters align-items-center">
-                                                <div class="col-auto">
-                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">
-                                                    <a href='business_admin.php'>
-                                                            <button class='btn btn-info'>
-                                                            Faculty of Business Administration
-                                                        </button>
-                                                    </a>
-                                                    </div>
-                                                </div>
-                                                 
-                                            </div>
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!--   -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-warning shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                               Faculty</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">
-                                            <a href='modern_lang.php'>
-                                                <button class='btn btn-warning'>
-                                                Faculty of Arts and Modern Language
-                                                </button>
-                                            </a>
-                                            </div>
-                                        </div>
-                                         
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-warning shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                               Faculty</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">
-                                            <a href='social_science.php'>
-                                                <button class='btn btn-warning'>
-                                                Faculty of Social Science
-                                                </button>
-                                                </a>
-                                            </div>
-                                        </div>
-                                         
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
+                   
                     <!-- Content Row -->
 
  
 
     <!-- Page Heading -->
-    <h1 class="h3 mb-2 text-gray-800 text-center">FACULTY ARE</h1>
      
-
-
-
-
-
+  
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">

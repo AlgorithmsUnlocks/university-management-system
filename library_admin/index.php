@@ -131,6 +131,33 @@ include 'includes/navbar.php';
                                 </div>
                             </div>
                         </div>
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-danger shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">
+                                                Total Issue Books </div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">
+
+                                            <?php
+                                
+                                               $query = "SELECT `id` FROM `books_list` ORDER BY `id`";
+                                               $query_run= mysqli_query($db_conn,$query);
+                                               $row = mysqli_num_rows($query_run); 
+                                                                                          
+                                            ?>
+                                                <h4><?php echo '<h5> Total Issue Books ( '.$row.' )	</h5>';  ?></h4>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto">
+                                        <i class="fa-solid fa-book fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
                         
                         
                         
@@ -139,7 +166,7 @@ include 'includes/navbar.php';
 
 
 
-                     <!-- Project Card Example -->
+                     <!-- Project Card Example 
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
                             <h6 class="m-0 font-weight-bold text-primary">Overview Of System</h6>
@@ -179,7 +206,7 @@ include 'includes/navbar.php';
                     </div>
 
 
-
+                      -->
 
 
 

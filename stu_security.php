@@ -3,8 +3,10 @@
 
  if(!$_SESSION['st_id']){
    
-   $_SESSION['login_error'] = "Opps, something is wrong";
-   header('Location: student_login.php');
+  echo "<script>alert('You not Allow for this action'); </script>";
+  //echo "<script>location.href='../student_login.php'; </script>";
+  header('location: ../student_login.php');
+
  }
 
 ?>

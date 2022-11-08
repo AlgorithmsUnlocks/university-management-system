@@ -14,6 +14,24 @@ $query_run = mysqli_query($db_conn,$query);
 
 
 ?>
+<style>
+     
+      
+     .wrapper .table-content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 25px 0;
+     }
+     .wrapper .table-content form button{
+        width: 250px;
+        padding: 10px 0;
+        font-size: 18px;
+        line-height: 22px;
+     }
+     
+</style>
 
 
 <div class="container manage_items">
@@ -23,6 +41,21 @@ $query_run = mysqli_query($db_conn,$query);
  </h4>
 
 <div class="table-responsive">
+
+<div class="wrapper">
+        <div class="table-content">
+
+            <form action="xlsx_pdf_action.php" method="post">
+               <button type="submit" class="btn btn-success" name="xlsx_books_btn">Download XLSX</button> 
+            </form>
+            <form action="xlsx_pdf_action.php" method="post">
+               <button type="submit" class="btn btn-primary" name="pdf_books_btn">Download PDF</button>
+            </form>
+     </div>
+   </div>
+
+
+
  <table class="table table-bordered" cellspacing="0" width="100%">
 
     <?php 

@@ -125,11 +125,11 @@
                 <div id="collapseSix" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">All Shots:</h6>
-                        <a class="collapse-item " href="#">
+                        <a class="collapse-item " href="add_issue_books.php">
                           ADD ISSUED BOOKS
                         </a>
                          
-                        <a class="collapse-item" href="#">
+                        <a class="collapse-item" href="manage_issue_books.php">
                            MANAGE ISUUED BOOKS
                           
                         </a>
@@ -141,6 +141,12 @@
                 <a class="nav-link" href="#">
                 <i class="fa-brands fa-hire-a-helper fs-17 text-white"></i>
                     <span>Blood Helper
+                      </span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="auto_font_page.php">
+                <i class="fa-brands fa-hire-a-helper fs-17 text-white"></i>
+                    <span>Generate Auto Font Page 
                       </span></a>
             </li>
 

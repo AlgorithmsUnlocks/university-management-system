@@ -66,7 +66,31 @@ include '../Database/config.php';
                     </div>
                 </div>
             </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFour"
+                    aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>Aumation System of LU </span>
+                </a>
+                <div id="collapseFour" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">All Depeartment:</h6>
+                        <a class="collapse-item" href="front_page_design.php">Generate Font Page (Single)</a>
+                        <a class="collapse-item" href="">Generate Font Page (Group)</a>
+                        <a class="collapse-item" href="">Generate Class Routine</a>
+                        <a class="collapse-item" href="">Generate Cover Letter</a>
+                        <a class="collapse-item" href="">Generate Recommandation Letter</a>
+                       
+                    </div>
+                </div>
+            </li>
            
+         <style>
+
+                a.collapse-item {
+                    text-transform: uppercase;
+                }
+         </style>
 
            
 
