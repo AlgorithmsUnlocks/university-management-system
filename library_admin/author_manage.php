@@ -48,7 +48,7 @@ include ('includes/navbar.php');
    </div>
 
 
- <table class="table table-bordered" cellspacing="0" width="100%">
+ <table class="table table-bordered" cellspacing="0" width="100%" id="datatablesapi">
 
     <?php 
      

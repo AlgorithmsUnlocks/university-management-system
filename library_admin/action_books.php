@@ -13,16 +13,16 @@ if(isset($_POST['register_book'])){
     $book_author = $_POST['book_author'];
     $book_category = $_POST['book_category'];
     $isbn_number = $_POST['isbn_number'];
-    $book_price = $_POST['book_price'];
+    $book_copies = $_POST['book_copies'];
     $book_photo = $_FILES['book_photo'];
    
     $imageLocation = $_FILES['book_photo']['tmp_name'];
     $imageName = $_FILES['book_photo']['name'];
     $image_des = "upload/".$imageName;
    
-    if(!empty($book_name) && !empty($book_author) && !empty($book_category) && !empty($isbn_number) && !empty($book_price)){
+    if(!empty($book_name) && !empty($book_author) && !empty($book_category) && !empty($isbn_number) && !empty($book_copies)){
        
-       $query3 = "INSERT INTO `books_list`(`book_name`, `book_author`, `book_category`, `isbn_number`, `books_price`, `book_photo`) VALUES ('$book_name','$book_author','$book_category','$isbn_number','$books_price','$image_des')";
+       $query3 = "INSERT INTO `books_list`(`book_name`, `book_author`, `book_category`, `isbn_number`, `book_copies`, `book_photo`) VALUES ('$book_name','$book_author','$book_category','$isbn_number','$book_copies','$image_des')";
    
        $query_run3 = mysqli_query($db_conn,$query3);
        if($query_run3){
@@ -55,13 +55,15 @@ if(isset($_POST['update_book'])){
     $book_author = $_POST['book_author'];
     $book_category = $_POST['book_category'];
     $isbn_number = $_POST['isbn_number'];
+    $book_copies = $_POST['book_copies'];
     $book_photo = $_FILES['book_photo'];
+
    
     $imageLocation = $_FILES['book_photo']['tmp_name'];
     $imageName = $_FILES['book_photo']['name'];
     $image_des = "upload/".$imageName;
 
-    $query = "UPDATE `books_list` SET `book_name`='$book_name',`book_author`='$book_author',`book_category`='$book_category',`isbn_number`='$isbn_number', `book_photo`='$image_des' WHERE `id` ='$id'";
+    $query = "UPDATE `books_list` SET `book_name`='$book_name',`book_author`='$book_author',`book_category`='$book_category',`isbn_number`='$isbn_number',`book_copies`='$book_copies', `book_photo`='$image_des' WHERE `id` ='$id'";
 
     $query_run = mysqli_query($db_conn, $query);
     

@@ -83,9 +83,9 @@ $query_run2 = mysqli_query($db_conn,$query2);
                         <small>*** International Standard Books Number</small>
                     </div>
                     <div class="form-group">
-                        <label for="">Book Price</label>
-                        <input type="text" name="book_price" class="form-control">
-                        <small>Price of the book</small>
+                        <label for="">Number of Copies</label>
+                        <input type="number" name="book_copies" class="form-control">
+                        <small>Number of copies</small>
                     </div>
                     <div class="form-group">
                             <label for="">Book Cover Photo</label>

@@ -8,7 +8,7 @@ include ('includes/navbar.php');
 <?php 
 /* Books Category */
 
-$query = "SELECT * FROM `books_list";
+$query = "SELECT * FROM `issue_book";
 $query_run = mysqli_query($db_conn,$query);
 
 
@@ -37,7 +37,17 @@ $query_run = mysqli_query($db_conn,$query);
 <div class="container-fluid manage_items m-3">
  
  <h4 class="text-center text-primary border p-2 m-3">
-    All Books
+    All Isse Books
+ </h4>
+ <h4 class="text-center">
+  <?php 
+   if(isset($_SESSION['update']) && $_SESSION['update'] != ''){
+    echo '<h4 class="text-success text-center">'.$_SESSION['update'].'</h4>';
+    unset($_SESSION['update']);
+   }
+  
+  ?>
+
  </h4>
 
 <div class="table-responsive">
@@ -46,10 +56,10 @@ $query_run = mysqli_query($db_conn,$query);
         <div class="table-content">
 
             <form action="xlsx_pdf_action.php" method="post">
-               <button type="submit" class="btn btn-success" name="xlsx_books_btn">Download XLSX</button> 
+               <button type="submit" class="btn btn-success" name="xlsx_isse_books_btn">Download XLSX</button> 
             </form>
             <form action="xlsx_pdf_action.php" method="post">
-               <button type="submit" class="btn btn-primary" name="pdf_books_btn">Download PDF</button>
+               <button type="submit" class="btn btn-primary" name="pdf_isse_books_btn">Download PDF</button>
             </form>
             
      </div>
@@ -75,24 +85,22 @@ $query_run = mysqli_query($db_conn,$query);
     <thead class="table_head">
      <tr>
         <th> ID </th>
-        <th>Books Cover</th>
         <th> Book Name</th>
-        <th> ISBN Number </th>
-        <th>Author Name</th>
-        <th>Books Cateory</th>
-        <th>Number of Copies</th>
+        <th> Student Name </th>
+        <th>Book Assign Date</th>
+        <th>Book Return Date</th>
+        <th>Message</th>
         <th>Action</th>
      </tr>
     </thead>
     <tfoot class="table_foot">
         <tr>
             <th> ID </th>
-            <th>Books Cover</th>
             <th> Book Name</th>
-            <th> ISBN Number </th>
-            <th>Author Name</th>
-            <th>Books Cateory</th>
-            <th>Number of Copies</th>
+            <th> Student Name </th>
+            <th>Book Assign Date</th>
+            <th>Book Return Date</th>
+            <th>Message</th>
             <th>Action</th>
         </tr>
     </tfoot>
@@ -109,34 +117,34 @@ $query_run = mysqli_query($db_conn,$query);
 
        <tr>
         <td> <?php echo $row['id']; ?> </td>
-        <td> <?php 
-        if($row['book_photo'] == 'upload/'){
+        <td> <?php echo $row['name']; ?></td>
+        <td> <?php  echo $row['student_name']; ?></td>
+        <td> <?php echo $row['assign_date']; ?> </td>
+        <td> <?php echo $row['return_date']; ?></td>
+        <td> <?php
+         
+         if($row['message'] == 'Return'){
             ?>
-            <img src="../upload/circle.png"/>
-            <small> Image is not set</small>
+            <span style="color: green; font-weight: 600"><i class="fa-solid fa-circle-check"> 
+            </i> <?php echo $row['message']; ?> </span>
             <?php
-        }else{
-            echo '<img src='.$row['book_photo'].' alt="books" style="width:110px 
-        ; height: 110px; border:none; padding: 5px"">';
-        }
+         }else{
+            ?>
+            <span style="color: red; font-weight: 600"><i class="fa-solid fa-circle-xmark"> 
+            </i> <?php echo $row['message']; ?> </span>
+            <?php
+         }
         
-        ?></td>
-
-        <td> <?php echo $row['book_name']; ?></td>
-        <td> <?php  echo $row['isbn_number']; ?></td>
-        <td> <?php echo $row['book_author']; ?> </td>
-        <td> <?php echo $row['book_category']; ?></td>
-         <td> <?php echo $row['book_copies']; ?></td>
+        ?> </td>
         <td>
             <div class="action-form">
-                <form action="action_books.php" method="POST">
+                <form action="issue_book_action.php" method="POST">
                     <input type="hidden" class="form-control" name="delete_id" value="<?php echo $row['id']; ?>">
                     <button type="submit" class="btn btn-danger" name="delete_btn">
                         <i class="fa-sharp fa-solid fa-delete-left"> </i>
                     </button>
-                </form>
-                
-                <form action="books_edit.php" method="POST">
+                </form>  
+                <form action="issue_books_edit.php" method="POST">
                     <input type="hidden" class="form-control" name="edit_id" value="<?php echo $row['id']; ?>"> 
                     <button type="submit" class="btn btn-warning" name="edit_btn">
                     <i class="fa-solid fa-pen-to-square">  </i>
@@ -162,6 +170,8 @@ $query_run = mysqli_query($db_conn,$query);
  </div>
 </div>
  
+
+
 
 <style>
     .action-form{

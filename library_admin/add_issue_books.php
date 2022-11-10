@@ -20,12 +20,6 @@ $query_run = mysqli_query($db_conn,$query);
 $query2 = "SELECT * FROM `student_panel";
 $query_run2 = mysqli_query($db_conn,$query2);
 
-/* Books Authors */
-
-$query1 = "SELECT * FROM `books_authors";
-$query_run1 = mysqli_query($db_conn,$query1);
- 
-
 
 ?>
 
@@ -44,19 +38,20 @@ $query_run1 = mysqli_query($db_conn,$query1);
                     <!-- Content Row -->
 
     <div class="container addBox">
-      <form action="#" method="post" enctype="multipart/form-data">
+      <form action="issue_book_action.php" method="POST" enctype="multipart/form-data">
         <div class="form first">
             <div class="details_books">
                 <span class="title text-center"> Assign Books Details
-                <?php 
-                     if(isset($_SESSION['message']) && $_SESSION['message'] != ''){
-                        echo '<br> <h4 class="text-danger">'.$_SESSION['message'].'</h4>';
-                        unset($_SESSION['message']);
+                </span>
+                <h4>
+                    <?php
+                     if(isset($_SESSION['missing']) && $_SESSION['missing'] != ''){
+                        echo '<h4 class="text-white text-center">'.$_SESSION['missing'].'</h4>';
+                        unset($_SESSION['missing']);
                      }
                     ?>
-                     
-                </span>
-                
+                </h4>
+    
                 <div class="feilds">
 
                     <div class="form-group">
@@ -70,28 +65,29 @@ $query_run1 = mysqli_query($db_conn,$query1);
                     </div>
                     <div class="form-group">
                         <label for="">Student Name</label>
-                        <select name="book_author" class="form-control">
+                        <select name="student_name" class="form-control">
                             <?php while($row = mysqli_fetch_array($query_run2)):; ?>
                             <option><?php echo $row[1]; ?></option>
                             <?php endwhile; ?>
                         </select>
                         <small>*** Regsister student name </small>
                     </div>
+                    
                     <div class="form-group">
                         <label for=""> Book Assign Date </label>
-                        <input type="date" name="" class="form-control">
+                        <input type="date" name="assign_date" class="form-control">
                         <small>*** Assign date of book</small>
                     </div>
                     <div class="form-group">
                         <label for=""> Book Return Date </label>
-                        <input type="date" name="" class="form-control">
+                        <input type="date" name="return_date" class="form-control">
                         <small>*** Return date of book</small>
                     </div>
 
 
                 </div>
                 <div class="save_feild text-center">
-                    <button type="submit" class="btn btn-primary" name="register_book"><i class="fa-solid fa-book"> Assign Books </i></button>
+                    <button type="submit" class="btn btn-primary" name="issue_book"><i class="fa-solid fa-book"> Assign Books </i></button>
                 </div>
 
             </div>

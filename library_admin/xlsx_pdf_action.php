@@ -241,6 +241,94 @@ if(isset($_POST['xlsx_btn'])){
     $mpdf -> output($file,'I');
 
   }
+}else if(isset($_POST['xlsx_isse_books_btn'])){
+   
+  $query = "SELECT * FROM `issue_book`";
+  $query_run = mysqli_query($db_conn,$query);
+  $output = '';
+
+  if(mysqli_num_rows($query_run) > 0){
+   
+    $output .= '
+     <table class="table">
+       <tr>
+        <th> ID </th>
+        <th> Book Name</th>
+        <th> Student Name </th>
+        <th>Book Assign Date</th>
+        <th>Book Return Date</th>
+        <th>Message</th>
+       </tr>
+
+    ';
+    while($row = mysqli_fetch_array($query_run)){
+      $output .= '
+        <tr> 
+          <td> '.$row['id'].'</td>
+          <td> '.$row['name'].'</td>
+          <td> '.$row['student_name'].'</td>
+          <td> '.$row['assign_date'].'</td>
+          <td> '.$row['return_date'].'</td>
+          <td> '.$row['message'].'</td>
+        </tr>
+      ';
+    }
+    $output .= '
+      </table>
+    ';
+
+    header('Content_Type: application/xls');
+    header('Content-Description: Books Issue');
+    header('Content-Disposition: attachment; filename="Books Issue.xls"');
+    echo $output;
+  }else{
+    echo "Data is Not Found ";
+  }
+
+}else if(isset($_POST['pdf_isse_books_btn'])){
+
+  require('vendor/vendor/autoload.php');
+  
+  $query = "SELECT * FROM `issue_book`";
+  $query_run = mysqli_query($db_conn,$query);
+  $output = '';
+
+  if(mysqli_num_rows($query_run) > 0){
+   
+    $output .= '
+     <table class="table">
+       <tr>
+          <th> ID </th>
+          <th> Book Name</th>
+          <th> Student Name </th>
+          <th>Book Assign Date</th>
+          <th>Book Return Date</th>
+          <th>Message</th>
+       </tr>
+
+    ';
+    while($row = mysqli_fetch_array($query_run)){
+      $output .= '
+      <tr> 
+          <td> '.$row['id'].'</td>
+          <td> '.$row['name'].'</td>
+          <td> '.$row['student_name'].'</td>
+          <td> '.$row['assign_date'].'</td>
+          <td> '.$row['return_date'].'</td>
+          <td> '.$row['message'].'</td>
+       </tr>
+      ';
+    }
+    $output .= '
+      </table>
+    ';
+   
+    $mpdf = new \Mpdf\Mpdf();
+    $mpdf -> WriteHTML($output);
+    $file = 'Books Issue '.time().'.pdf';
+    $mpdf -> output($file,'I');
+
+  }
 }
 
 
